@@ -2,9 +2,9 @@
 
 import Store from './Store';
 
-class FileStore {
+class FileStore extends Store {
 }
 
-const fileStore = new FileStore([]);
+const fileStore = new FileStore(['']);
 
 export default fileStore;

@@ -10,8 +10,8 @@ export default class SidebarItem extends React.Component {
   }
   render() {
     return (
-      <li>
-        <a>
+      <li className='sidebar__item'>
+        <a className='sidebar__link'>
         </a>
       </li>
     );

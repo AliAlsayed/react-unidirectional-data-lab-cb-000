@@ -5,12 +5,24 @@ import SidebarItem from './SidebarItem';
 
 export default class Sidebar extends React.Component {
   handleClick(index, ev) {
+    ev.preventDefault()
+    this.props.handleSelect;
   }
   render() {
     const { files, selectedFileIndex, onAdd } = this.props;
 
     return (
       <ul className="sidebar">
+        {
+          files.map((file, i) => (
+            <SidebarItem
+              key={i}
+              isSelected={selectedFileIndex === i}
+              file={file}
+              onClick={this.handleClick.bind(null, i)}
+            />
+          ))
+        }
       </ul>
     );
   }
